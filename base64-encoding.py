@@ -44,18 +44,25 @@ QQ==
 import base64
 
 
+def print_strings(original, encoded, decoded):
+    print("Original {}".format(original))
+    print("base64 encoded {}".format(encoded))
+    print("base64 decoded {}".format(decoded))
+
+
 print("\nExample with perfect match")
 s = b"ABC"
-print("Original {}".format(s))
-b = base64.standard_b64encode(s)
-print("base64 encoded {}".format(b))
-d = base64.standard_b64decode(b)
-print("base64 decoded {}".format(d))
+e = base64.standard_b64encode(s)
+d = base64.standard_b64decode(e)
+print_strings(s, e, d)
 
 print("\nExample with padding")
 s = b"A"
-print("Original {}".format(s))
-b = base64.standard_b64encode(s)
-print("base64 encoded {}".format(b))
-d = base64.standard_b64decode(b)
-print("base64 decoded {}".format(d))
+e = base64.standard_b64encode(s)
+d = base64.standard_b64decode(e)
+print_strings(s, e, d)
+
+print("\nother example")
+s = b"hellodiana"
+e = base64.standard_b64encode(s)
+print_strings(s, e, s)

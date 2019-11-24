@@ -26,7 +26,7 @@ class Caesar(object):
 
 
 if __name__ == "__main__":
-    c = Caesar(2)
+    c = Caesar(1)
     text = "Hello, Diana!"
     encrypted = c.encrypt(text)
     print("Original  [{}]".format(text))
