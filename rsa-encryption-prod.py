@@ -5,7 +5,7 @@ import binascii
 
 def generate_rsa_keys():
     """
-    encrypted = pow( ord(a), e, p*q )
+    encrypted = pow( ord('a'), e, p*q )
     decrypted = chr( pow(encrypted, d, p*q) )
     :return:
     """
@@ -17,6 +17,7 @@ def generate_rsa_keys():
     print("p={}".format(key_pair.p))
     print("q={}".format(key_pair.q))
     print("n=pq", key_pair.n)
+    print("e=", public_key.e)
     print("d={}".format(key_pair.d))
     print("")
     print("Public key (n):", hex(public_key.n))
